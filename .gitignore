@@ -45,6 +45,7 @@ desktop.ini
 *.temp
 *.log
 nul
+tmp/
 
 # Test files (if any)
 *.test

@@ -209,6 +209,7 @@ This skill includes:
 
 ### references/
 - `problem-solving-mindset.md` - Scientific approach to problem-solving: bold hypotheses, careful verification, and disciplined reasoning
+- `systematic-debugging-methodology.md` - Practical debugging framework: Occam's Razor, diagnostic scripts, evidence hierarchy, and real-world examples
 - `troubleshooting-sop.md` - Detailed standard operating procedures for systematic troubleshooting
 - `error-template-patterns.md` - Guide to identifying and extracting error message templates
 - `environment-info-guide.md` - Environment information collection guidelines with privacy protection

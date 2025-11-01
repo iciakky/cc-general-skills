@@ -1,0 +1,20 @@
+{
+  "name": "cc-general-skills",
+  "description": "Marketplace for general-purpose Claude Code skills: troubleshooting, debugging, and systematic methodology",
+  "owner": {
+    "name": "iciakky",
+    "email": "noreply@example.com"
+  },
+  "plugins": [
+    {
+      "name": "cc-general-skills",
+      "description": "General-purpose troubleshooting and debugging skills for Claude Code with systematic methodology",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "iciakky",
+        "email": "noreply@example.com"
+      }
+    }
+  ]
+}

@@ -22,40 +22,76 @@ Automatically troubleshoot unexpected results and command/script errors without 
 - Silent failures
 - Explicit errors (SDK/API errors, exceptions, build failures)
 
-[View skill documentation](./error-troubleshooter/SKILL.md)
+[View skill documentation](./skills/error-troubleshooter/SKILL.md)
 
 ## Installation
 
-### Option 1: Download Release
+### Option 1: Plugin Installation (Recommended)
 
-1. Download `error-troubleshooter.zip` from the releases
-2. Extract to `~/.claude/skills/`
-3. Restart Claude Code
-
-### Option 2: Manual Installation
+Install directly using Claude Code's plugin system:
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/cc-general-skills.git
+# Add this repository as a marketplace
+/plugin marketplace add iciakky/cc-general-skills
 
-# Copy skill to Claude Code skills directory
-cp -r cc-general-skills/error-troubleshooter ~/.claude/skills/
+# Install the plugin
+/plugin install cc-general-skills@cc-general-skills
 
 # Restart Claude Code
 ```
 
+### Option 2: Manual Installation
+
+**Unix/Linux/macOS:**
+```bash
+git clone https://github.com/iciakky/cc-general-skills.git
+cp -r cc-general-skills/skills/error-troubleshooter ~/.claude/skills/
+```
+
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/iciakky/cc-general-skills.git
+Copy-Item -Recurse cc-general-skills\skills\error-troubleshooter $env:USERPROFILE\.claude\skills\
+```
+
+Then restart Claude Code.
+
+### Option 3: Download Release
+
+1. Download the latest `error-troubleshooter.zip` from [Releases](https://github.com/iciakky/cc-general-skills/releases)
+2. Extract to `~/.claude/skills/` (or `%USERPROFILE%\.claude\skills\` on Windows)
+3. Restart Claude Code
+
 ## Development
+
+### Repository Structure
+
+```
+cc-general-skills/
+├── .claude-plugin/          # Plugin configuration
+│   ├── plugin.json          # Plugin metadata
+│   └── marketplace.json     # Marketplace catalog
+├── skills/                  # Skills directory
+│   └── error-troubleshooter/
+│       ├── SKILL.md         # Main skill definition
+│       ├── references/      # Reference documentation
+│       ├── assets/          # Templates and resources
+│       └── repackage.py     # Build script
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 
 ### Repackaging a Skill
 
-Each skill includes a `repackage.py` script for convenience:
+Each skill includes a `repackage.py` script for creating distributable zip files:
 
 ```bash
-cd error-troubleshooter
+cd skills/error-troubleshooter
 python repackage.py
 ```
 
-This creates a distributable zip file in the parent directory.
+This creates `error-troubleshooter.zip` in the `skills/` directory.
 
 ## Contributing
 

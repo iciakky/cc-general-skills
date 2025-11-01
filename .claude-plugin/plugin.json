@@ -1,0 +1,13 @@
+{
+  "name": "cc-general-skills",
+  "description": "General-purpose troubleshooting and debugging skills for Claude Code with systematic methodology",
+  "version": "1.0.0",
+  "author": {
+    "name": "iciakky",
+    "email": "noreply@example.com"
+  },
+  "homepage": "https://github.com/iciakky/cc-general-skills",
+  "repository": "https://github.com/iciakky/cc-general-skills",
+  "license": "MIT",
+  "keywords": ["troubleshooting", "debugging", "error-handling", "systematic-methodology", "diagnostic-scripts"]
+}

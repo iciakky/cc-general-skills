@@ -114,7 +114,7 @@ Original: FileNotFoundError: [Errno 2] No such file or directory: '/home/user/da
 Template: FileNotFoundError No such file or directory
 ```
 
-See `references/error-template-patterns.md` for detailed guidance.
+See `{baseDir}/references/error-template-patterns.md` for detailed guidance.
 
 **For Unexpected Behavior:**
 Document the behavior pattern:
@@ -138,7 +138,7 @@ Collect relevant environment details when:
 
 **IMPORTANT**: Avoid collecting sensitive information. If sensitive data is necessary, explicitly request user authorization first.
 
-See `references/environment-info-guide.md` for collection guidelines and privacy protection.
+See `{baseDir}/references/environment-info-guide.md` for collection guidelines and privacy protection.
 
 #### Step 3: Research the Problem
 
@@ -158,7 +158,7 @@ For difficult problems, create a debug notes file to:
 - Resume from interruptions
 - Maintain systematic progress
 
-Use the template in `assets/debug-notes-template.md` to structure notes.
+Use the template in `{baseDir}/assets/debug-notes-template.md` to structure notes.
 
 #### Step 5: Formulate and Test Theories
 
@@ -195,7 +195,7 @@ For complex investigations:
 
 1. **Proactive Investigation**: Don't wait for the user to request troubleshooting—start investigating immediately when unexpected behavior or errors occur
 2. **Prioritize Unexpected Behavior**: Check for silent failures and behavioral anomalies first, as they're more subtle than explicit errors
-3. **Bold Hypotheses, Careful Verification**: Generate multiple competing theories, then rigorously verify each with concrete evidence (see `references/problem-solving-mindset.md`)
+3. **Bold Hypotheses, Careful Verification**: Generate multiple competing theories, then rigorously verify each with concrete evidence (see `{baseDir}/references/problem-solving-mindset.md`)
 4. **Challenge Your Own Reasoning**: Actively search for counter-evidence and successful counter-examples that would disprove your theories
 5. **Acknowledge Uncertainty**: Present confidence levels; admit when evidence is incomplete rather than pretending certainty
 6. **Revert on Failure**: If a fix doesn't work, always revert before trying another approach

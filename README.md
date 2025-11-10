@@ -4,6 +4,32 @@ A collection of general-purpose skills for [Claude Code](https://claude.com/clau
 
 ## Skills
 
+### debug
+
+Apply systematic debugging methodology using medical differential diagnosis principles.
+
+**Key Features:**
+- **7-Step Medical Diagnosis Approach**: Systematic workflow from observation to prevention
+- **Evidence-Based Investigation**: Prioritize facts over assumptions
+- **Differential Diagnosis Lists**: Enumerate all possible failure points before elimination
+- **Chain-of-Thought Reasoning**: Transparent deductive process with experimental verification
+- **Comprehensive Documentation**: Templates for investigation logs and post-mortem reports
+
+**Triggers on:**
+- AI modifies working code and anomalies occur
+- Users report unexpected test results or execution failures
+
+**Workflow:**
+1. Observe Without Preconception
+2. Classify and Isolate Facts
+3. Build Differential Diagnosis List
+4. Apply Elimination and Deductive Reasoning
+5. Experimental Verification and Investigation
+6. Locate and Implement Fix
+7. Prevention Mechanism
+
+[View skill documentation](./skills/debug/SKILL.md)
+
 ### error-troubleshooter
 
 Automatically troubleshoot unexpected results and command/script errors without user request.
@@ -42,23 +68,30 @@ Install directly using Claude Code's plugin system:
 
 ### Option 2: Manual Installation
 
-**Unix/Linux/macOS:**
+**Install all skills (Unix/Linux/macOS):**
 ```bash
 git clone https://github.com/iciakky/cc-general-skills.git
+cp -r cc-general-skills/skills/debug ~/.claude/skills/
 cp -r cc-general-skills/skills/error-troubleshooter ~/.claude/skills/
 ```
 
-**Windows (PowerShell):**
+**Install all skills (Windows PowerShell):**
 ```powershell
 git clone https://github.com/iciakky/cc-general-skills.git
+Copy-Item -Recurse cc-general-skills\skills\debug $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse cc-general-skills\skills\error-troubleshooter $env:USERPROFILE\.claude\skills\
 ```
+
+**Install specific skills only:**
+Replace `debug` or `error-troubleshooter` with the skill you want to install.
 
 Then restart Claude Code.
 
 ### Option 3: Download Release
 
-1. Download the latest `error-troubleshooter.zip` from [Releases](https://github.com/iciakky/cc-general-skills/releases)
+1. Download the latest skill zip files from [Releases](https://github.com/iciakky/cc-general-skills/releases):
+   - `debug.zip` - Systematic debugging with medical diagnosis methodology
+   - `error-troubleshooter.zip` - Automatic error troubleshooting
 2. Extract to `~/.claude/skills/` (or `%USERPROFILE%\.claude\skills\` on Windows)
 3. Restart Claude Code
 
@@ -72,6 +105,11 @@ cc-general-skills/
 │   ├── plugin.json          # Plugin metadata
 │   └── marketplace.json     # Marketplace catalog
 ├── skills/                  # Skills directory
+│   ├── debug/
+│   │   ├── SKILL.md         # Main skill definition
+│   │   ├── references/      # Investigation templates and bug patterns
+│   │   ├── assets/          # Report templates
+│   │   └── repackage.py     # Build script
 │   └── error-troubleshooter/
 │       ├── SKILL.md         # Main skill definition
 │       ├── references/      # Reference documentation
@@ -87,11 +125,16 @@ cc-general-skills/
 Each skill includes a `repackage.py` script for creating distributable zip files:
 
 ```bash
-cd skills/error-troubleshooter
+# Repackage debug skill
+cd skills/debug
+python repackage.py
+
+# Repackage error-troubleshooter skill
+cd ../error-troubleshooter
 python repackage.py
 ```
 
-This creates `error-troubleshooter.zip` in the `skills/` directory.
+This creates `debug.zip` and `error-troubleshooter.zip` in the `skills/` directory.
 
 ## Contributing
 

@@ -1,6 +1,6 @@
 ---
 name: debug
-description: Apply systematic debugging methodology using medical differential diagnosis principles. Trigger when AI modifies working code and anomalies occur, or when users report unexpected test results or execution failures. Use observation without preconception, fact isolation, differential diagnosis lists, deductive exclusion, experimental verification, precise fixes, and prevention mechanisms.
+description: Deep investigation tool for complex bugs using medical diagnosis methodology. Use when simple troubleshooting fails, for intermittent issues, race conditions, or when user says "I've tried everything". Applies 7-step process: observe facts, classify symptoms, differential diagnosis, deductive elimination, experimental verification, precise fix, prevention. For difficult bugs needing rigorous analysis.
 ---
 
 # Debug
